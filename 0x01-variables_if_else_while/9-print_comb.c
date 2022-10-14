@@ -2,7 +2,7 @@
 /**
  * main - entry point
  *
- * Return: always returns 0
+ * Return: alway returns 0
  *
  */
 int main(void)
@@ -14,7 +14,7 @@ putchar((i % 10) + '0');
 if (i != 19)
 {
 putchar(',');
-putchar(' ')
+putchar(' ');
 }
 }
 putchar('\n');
