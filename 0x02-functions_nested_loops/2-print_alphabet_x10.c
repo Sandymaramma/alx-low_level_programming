@@ -1,11 +1,8 @@
 #include "main.h"
 /**
- * main - Entry point
- *
- * Return: Always 0
+ *print_alphabet_x10 - prints 10 times the alphabet, in lowercase
  */
-int main(void)
-
+void print_alphabet_x10(void);
 {
 int count = 0;
 char letter;
