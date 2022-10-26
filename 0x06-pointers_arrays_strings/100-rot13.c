@@ -1,22 +1,24 @@
+#include "main.h"
 /**
- * leet - leet
- * @s: string
- *
+ * rot13 - encrypts code
+ * @s: string to encrypt
  * Return: char value
  */
-char *leet(char *s)
+char *rot13(char *s)
 {
-	char alphaArr[] = "a4A4e3E3o0O0t7T7l1L1";
+char part1[52] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+char part2[52] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
+
 	int i;
-	int j;
+	int j = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; alphaArr[j] != '\0'; j++)
+		for (j = 0; part1[j] != '\0'; j++)
 		{
-			if (s[i] == alphaArr[j])
+			if (s[i] == part1[j])
 			{
-				s[i] = alphaArr[j + 1];
+				s[i] = part2[j];
 				break;
 			}
 		}
