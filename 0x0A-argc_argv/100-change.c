@@ -42,25 +42,25 @@ int change(int cents)
 			coins++;
 		}
 		while (cents >= d)
+		{
+			cents -= d;
+			coins++;
 		}
-	cents -= d;
-	coins++;
-}
-while (cents >= n)
-{
-	cents -= n;
-	coins++;
-}
-while (cents >= t)
-{
-	cents -= t;
-	coins++;
-}
-while (cents >= p)
-{
-	cents -= p;
-	coins++;
-}
-}
-return (coins);
+		while (cents >= n)
+		{
+			cents -= n;
+			coins++;
+		}
+		while (cents >= t)
+		{
+			cents -= t;
+			coins++;
+		}
+		while (cents >= p)
+		{
+			cents -= p;
+			coins++;
+		}
+	}
+	return (coins);
 }
