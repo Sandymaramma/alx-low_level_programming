@@ -1,25 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "holberton.h"
-
+#include "main.h"
 /**
- * main - print product of argument numbers
- * @argc: argument counter
- * @argv: numbers to multiply
- * Return: 0 on success, 1 if two arguments not given
+ * main - Entry Point
+ * atoi is a function that converts a string into an int
+ * @argc: arguments
+ * @argv: array pointing to arguments
+ * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
+	int i, res = 1;
 
-	/* validate input */
 	if (argc != 3)
 	{
-		printf("Error\n");
+		printf("%s\n", "Error");
 		return (1);
 	}
-
-	/* mulitply two arguments passed via cmd line */
-	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	else
+	{
+		for (i = 1; i < argc; i++)
+		{
+			res *= atoi(argv[i]);
+		}
+		printf("%d\n", res);
+	}
 	return (0);
 }
