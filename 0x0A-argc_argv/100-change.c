@@ -1,39 +1,66 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "holberton.h"
-
+#include "main.h"
+int change(int cents);
 /**
- * main - prints the minimum number of coins for an amount of money
- * @argc: should count two arguments
- * @argv: arguments given should be program name and amount of money
- * Return: least number of coins, 0 if negative amount, 1 if amount not given
+ * main - Entry Point
+ * @argc: arguments
+ * @argv: array pointing to arguments
+ * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
-	int n, coins = 0;
-	/* validate input */
 	if (argc != 2)
 	{
-		printf("Error\n");
+		printf("%s\n", "Error");
 		return (1);
 	}
-	if (argv[1][0] == '-')
+	else if (argc < 0)
 	{
-		printf("0\n");
 		return (0);
 	}
-	/* convert string to int and calculate coins */
-	n = atoi(argv[1]);
-	coins += n / 25;
-	n = n % 25;
-	coins += n / 10;
-	n = n % 10;
-	coins += n / 5;
-	n = n % 5;
-	coins += n / 2;
-	n = n % 2;
-	coins += n / 1;
-	printf("%d\n", coins);
+
+	printf("%d\n", change(atoi(argv[1])));
 	return (0);
+}
+
+/**
+ * change - get change
+ * @cents: amount of coins from main function
+ * Return: change
+ */
+int change(int cents)
+{
+	int q = 25, d = 10, n = 5, t = 2, p = 1;
+	int coins;
+
+	while (cents > 0)
+	{
+		while (cents >= q)
+		{
+			cents -= q;
+			coins++;
+		}
+		while (cents >= d)
+		}
+	cents -= d;
+	coins++;
+}
+while (cents >= n)
+{
+	cents -= n;
+	coins++;
+}
+while (cents >= t)
+{
+	cents -= t;
+	coins++;
+}
+while (cents >= p)
+{
+	cents -= p;
+	coins++;
+}
+}
+return (coins);
 }
